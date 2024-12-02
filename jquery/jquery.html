@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <!-- <img src="download.jpeg" id="image" width="500px" height="300px">
+    <br>
+    <img src="images.jpeg" id="image2" width="500px" height="300px">
+    <br>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <br>
+    <img src="images (1).jpeg" id="image3" width="500px" height="300px">
+    <br>
+    <img src="download (1).jpeg" id="image4" width="500px" height="300px"> -->
+
+
+    <button id="animation"> Animate</button>
+    <div style="background:#ac84a5;height:100px;width:100px;position:absolute;margin-top:10px;" id="mydiv">
+
+    </div>
+
+
+    <button style="margin-top: 150px;" id="stop">Stop sliding</button>
+
+    <div id="flip">Click to slide down panel</div>
+    <div id="panel">Hello world!</div>
+</body>
+<script>
+    $(document).ready(function () {
+        //     $("#hide").click(function(){
+        //         $("#image").hide();
+        //         $("#image2").hide();
+        //     });
+        //     $("#show").click(function(){
+        //         $("#image").show();
+        //         $("#image2").show();
+        //     });
+        //     $("#flip").click(function(){
+        //      $("#image3").slideDown();
+        //      $("#image4").slideDown();
+        //     });
+        //     $("#flip").click(function(){
+        //      $("#image3").slideUp();
+        //      $("#image4").slideUp();
+        //     });
+
+
+
+        ///animation
+        $("#animation").click(function () {
+            $("#mydiv").animate({
+                left: '300px',
+                height: '200px',
+                width: '200px',
+                opacity: '0.7',
+
+            });
+        });
+
+
+        /////slide and stop
+        $("#flip").click(function (){
+            $("#panel").slideToggle(4000);
+        });
+
+        $("#stop").click(function(){
+            $("#panel").stop()
+
+        });
+    })
+
+
+
+
+
+
+
+
+</script>
+
+</html>
